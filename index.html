@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Capacitación TIC's</title>
+    <link rel="icon" href="icono.png">
+
+    <style>
+    body {
+        background-image: url("tics.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial;
+        margin: 0;
+    }
+
+    .fondo {
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 20px;
+    }
+
+    /* ENCABEZADO */
+    header {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    /* MENÚ */
+    nav {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    nav ul li a {
+        color: #00ffff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav ul li:hover {
+        background-color: #333;
+    }
+
+    /* SUBMENÚ */
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        background-color: #222;
+        top: 50px;
+        left: 0;
+        padding: 0;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    nav ul li ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    /* TEXTO */
+    h2 {
+        color: #ffd700;
+    }
+
+    p, ul, ol, dl {
+        background-color: rgba(0,0,0,0.6);
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: white;
+    }
+
+    /* CARRUSEL */
+    .carrusel {
+        width: 500px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .carrusel img {
+        width: 100%;
+        display: none;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<div class="fondo">
+
+    <!-- ENCABEZADO -->
+    <header>
+        Capacitación en TIC's
+    </header>
+
+    <!-- MENÚ CON SUBMENÚ -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+
+            <li>
+                <a href="#">Módulos</a>
+                <ul>
+                    <li><a href="C:\Users\Emiliano\Documents\HTML\Capacitación\primermodulo.html">Tercer semestre</a></li>
+                    <li><a href="C:\Users\Emiliano\Documents\HTML\Capacitación\cuarto semestre.html">Cuarto semestre</a></li>
+                    <li><a href="C:\Users\Emiliano\Documents\HTML\Capacitación\quintosemestre.html">Quinto semestre</a></li>
+                    <li><a href="C:\Users\Emiliano\Documents\HTML\Capacitación\sextosemestre.html">Sexto semestre</a></li>
+                </ul>
+            </li>
+
+            <li><a href="C:\Users\Emiliano\Documents\HTML\Capacitación\logos.html">Logos</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <p>
+        La capacitación en TIC's permite desarrollar habilidades digitales en programación,
+        redes, diseño y uso de herramientas tecnológicas.
+    </p>
+
+    <h2>Objetivo</h2>
+    <p>
+        Formar estudiantes capaces de utilizar y desarrollar tecnologías.
+    </p>
+
+    <h2>Puntos importantes</h2>
+    <ul>
+        <li>Uso de herramientas digitales</li>
+        <li>Desarrollo tecnológico</li>
+        <li>Preparación laboral</li>
+    </ul>
+
+    <!-- CARRUSEL -->
+    <h2>Evidencias</h2>
+    <div class="carrusel">
+        <img src="C:\Users\Emiliano\Documents\HTML\Capacitación\img2.png" class="slide">
+        <img src="img1.jpg" class="slide">
+        <img src="img3.jpg" class="slide">
+	<img src="img4.png" class="slide">
+	<img src="img5.jpg" class="slide">
+	<img src="img6.jpg" class="slide">
+	<img src="img7.png" class="slide">
+	<img src="img8.png" class="slide">
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        Capacitación TIC's © 2026 <br>
+        Contacto: alu_232003184@cobachmorelos.edu.mx
+    </footer>
+
+</div>
+
+<!-- SCRIPT DEL CARRUSEL -->
+<script>
+let index = 0;
+let slides = document.getElementsByClassName("slide");
+
+function mostrar() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) { index = 1; }
+
+    slides[index - 1].style.display = "block";
+
+    setTimeout(mostrar, 2000);
+}
+
+mostrar();
+</script>
+
+</body>
+</html>
